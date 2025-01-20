@@ -1,0 +1,39 @@
+
+services:
+  mongoDB:
+    image: mongo:latest
+    container_name: mongo-container
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+    ports:
+      - "${MONGO_PORT}:${MONGO_PORT}"
+    volumes:
+      - mongo_data:/data/db
+    command: --port=${MONGO_PORT}
+    networks:
+      - backend
+
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: java-reports-container
+    depends_on:
+      - mongoDB
+    ports:
+      - "${JAVA_APP_PORT}:${JAVA_APP_PORT}"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongoDB:${MONGO_PORT}/${MONGO_INITDB_DATABASE}?authSource=admin
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+    networks:
+      - backend
+
+volumes:
+  mongo_data:
+
+networks:
+  backend:
+    external: true
