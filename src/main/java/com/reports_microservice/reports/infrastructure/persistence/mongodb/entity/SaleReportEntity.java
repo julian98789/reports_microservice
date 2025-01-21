@@ -28,7 +28,7 @@ public class SaleReportEntity {
     private String creationDate;
 
     @Indexed
-    private Double totalAmount;
+    private Double total;
 
     @Indexed
     private List<SaleDetailsModel> saleDetails;

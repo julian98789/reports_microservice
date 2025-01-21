@@ -26,7 +26,7 @@ public class SaleReportModelUseCase implements ISaleReportModelServicePort {
         saleReport.setUserId(userId);
         saleReport.setUserEmail(email);
         saleReport.setSaleDetails(sale.getSaleDetails());
-        saleReport.setTotalAmount(sale.getTotalAmount());
+        saleReport.setTotal(sale.getTotal());
         saleReportModelPersistencePort.generateReport(saleReport);
 
     }

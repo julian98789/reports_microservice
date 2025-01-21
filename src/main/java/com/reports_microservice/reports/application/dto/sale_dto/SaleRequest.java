@@ -12,7 +12,7 @@ public class SaleRequest {
 
     private Long id;
     private Long userId;
-    private Double totalAmount;
+    private Double total;
     private LocalDate creationDate;
     private List<SaleDetailsRequest> saleDetails;
 }

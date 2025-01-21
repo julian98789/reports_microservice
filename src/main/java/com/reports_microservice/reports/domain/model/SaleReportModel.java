@@ -9,16 +9,16 @@ public class SaleReportModel {
     private Long userId;
     private String userEmail;
     private String creationDate;
-    private Double totalAmount;
+    private Double total;
     private List<SaleDetailsModel> saleDetails;
     private LocalDate saleDate;
 
-    public SaleReportModel(String id, Long userId, String userEmail, String creationDate, Double totalAmount, List<SaleDetailsModel> saleDetails, LocalDate saleDate) {
+    public SaleReportModel(String id, Long userId, String userEmail, String creationDate, Double total, List<SaleDetailsModel> saleDetails, LocalDate saleDate) {
         this.id = id;
         this.userId = userId;
         this.userEmail = userEmail;
         this.creationDate = creationDate;
-        this.totalAmount = totalAmount;
+        this.total = total;
         this.saleDetails = saleDetails;
         this.saleDate = saleDate;
     }
@@ -57,12 +57,12 @@ public class SaleReportModel {
         this.creationDate = creationDate;
     }
 
-    public Double getTotalAmount() {
-        return totalAmount;
+    public Double getTotal() {
+        return total;
     }
 
-    public void setTotalAmount(Double totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setTotal(Double total) {
+        this.total = total;
     }
 
     public List<SaleDetailsModel> getSaleDetails() {

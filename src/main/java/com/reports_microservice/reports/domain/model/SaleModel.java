@@ -10,15 +10,15 @@ public class SaleModel {
 
     private Long userId;
 
-    private Double totalAmount;
+    private Double total;
 
     private LocalDate creationDate;
 
     private List<SaleDetailsModel> saleDetails;
 
-    public SaleModel(Long id, Double totalAmount, Long userId, LocalDate creationDate, List<SaleDetailsModel> saleDetails) {
+    public SaleModel(Long id, Double total, Long userId, LocalDate creationDate, List<SaleDetailsModel> saleDetails) {
         this.id = id;
-        this.totalAmount = totalAmount;
+        this.total = total;
         this.userId = userId;
         this.creationDate = creationDate;
         this.saleDetails = saleDetails;
@@ -40,12 +40,12 @@ public class SaleModel {
         this.userId = userId;
     }
 
-    public Double getTotalAmount() {
-        return totalAmount;
+    public Double getTotal() {
+        return total;
     }
 
-    public void setTotalAmount(Double totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setTotal(Double total) {
+        this.total = total;
     }
 
     public LocalDate getCreationDate() {
