@@ -20,7 +20,7 @@ public class SaleReportRestController {
     private final ISaleReportModelServicePort saleReportServicePort;
     private final ISaleRequestMapper saleRequestMapper;
 
-    @PreAuthorize(Util.ROLE_AUX_BODEGA )
+    @PreAuthorize(Util.ROLE_CLIENT )
     @PostMapping
     public void createSaleReport(@RequestBody SaleRequest saleRequest) {
         SaleModel sale = saleRequestMapper.saleRequestToSaleModel(saleRequest);
