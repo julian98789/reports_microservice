@@ -17,16 +17,12 @@ public class SaleReportModelUseCase implements ISaleReportModelServicePort {
     }
 
     @Override
-    public void generateReport(SaleModel sale) {
+    public void generateReport(SaleReportModel saleReport) {
 
         Long userId = authenticationSecurityPort.getAuthenticatedUserId();
         String email = authenticationSecurityPort.getAuthenticatedUserEmail();
-        SaleReportModel saleReport = new SaleReportModel();
-        saleReport.setSaleDate(sale.getCreationDate());
         saleReport.setUserId(userId);
         saleReport.setUserEmail(email);
-        saleReport.setSaleDetails(sale.getSaleDetails());
-        saleReport.setTotal(sale.getTotal());
         saleReportModelPersistencePort.generateReport(saleReport);
 
     }

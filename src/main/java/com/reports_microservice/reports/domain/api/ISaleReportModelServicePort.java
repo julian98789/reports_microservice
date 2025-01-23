@@ -1,8 +1,9 @@
 package com.reports_microservice.reports.domain.api;
 
 import com.reports_microservice.reports.domain.model.SaleModel;
+import com.reports_microservice.reports.domain.model.SaleReportModel;
 
 public interface ISaleReportModelServicePort {
 
-    void generateReport(SaleModel sale);
+    void generateReport(SaleReportModel sale);
 }

@@ -19,7 +19,10 @@ import java.util.List;
 public class SaleReportEntity {
 
     @MongoId
-    private String id;
+    private Long id;
+
+    @Indexed
+    private String userId;
 
     @Indexed
     private String userEmail;
@@ -33,6 +36,5 @@ public class SaleReportEntity {
     @Indexed
     private List<SaleDetailsModel> saleDetails;
 
-    @Indexed
-    private LocalDate saleDate;
+
 }

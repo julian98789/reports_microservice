@@ -5,31 +5,31 @@ import java.util.List;
 
 public class SaleReportModel {
 
-    private String id;
+    private Long id;
     private Long userId;
     private String userEmail;
-    private String creationDate;
+    private LocalDate creationDate;
     private Double total;
     private List<SaleDetailsModel> saleDetails;
-    private LocalDate saleDate;
 
-    public SaleReportModel(String id, Long userId, String userEmail, String creationDate, Double total, List<SaleDetailsModel> saleDetails, LocalDate saleDate) {
+
+    public SaleReportModel(Long id, Long userId, String userEmail, LocalDate creationDate, Double total, List<SaleDetailsModel> saleDetail) {
         this.id = id;
         this.userId = userId;
         this.userEmail = userEmail;
         this.creationDate = creationDate;
         this.total = total;
         this.saleDetails = saleDetails;
-        this.saleDate = saleDate;
+
     }
 
     public SaleReportModel() {}
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -49,11 +49,11 @@ public class SaleReportModel {
         this.userEmail = userEmail;
     }
 
-    public String getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(String creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 
@@ -73,11 +73,4 @@ public class SaleReportModel {
         this.saleDetails = saleDetails;
     }
 
-    public LocalDate getSaleDate() {
-        return saleDate;
-    }
-
-    public void setSaleDate(LocalDate saleDate) {
-        this.saleDate = saleDate;
-    }
 }
