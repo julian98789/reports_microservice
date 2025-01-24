@@ -24,6 +24,9 @@ public class SaleModel {
         this.saleDetails = saleDetails;
     }
 
+    public SaleModel() {
+    }
+
     public Long getId() {
         return id;
     }
