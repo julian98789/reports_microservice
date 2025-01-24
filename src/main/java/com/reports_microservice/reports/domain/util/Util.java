@@ -1,4 +1,4 @@
-package com.reports_microservice.reports.domain.Util;
+package com.reports_microservice.reports.domain.util;
 
 public class Util {
 

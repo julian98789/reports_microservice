@@ -1,6 +1,6 @@
 package com.reports_microservice.reports.infrastructure.configuration;
 
-import com.reports_microservice.reports.domain.UseCase.SaleReportModelUseCase;
+import com.reports_microservice.reports.domain.usecase.SaleReportModelUseCase;
 import com.reports_microservice.reports.domain.api.ISaleReportModelServicePort;
 import com.reports_microservice.reports.domain.security.IAuthenticationSecurityPort;
 import com.reports_microservice.reports.domain.spi.ISaleReportModelPersistencePort;

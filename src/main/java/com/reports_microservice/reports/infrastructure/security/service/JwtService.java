@@ -1,6 +1,6 @@
 package com.reports_microservice.reports.infrastructure.security.service;
 
-import com.reports_microservice.reports.domain.Util.Util;
+import com.reports_microservice.reports.domain.util.Util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;

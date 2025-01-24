@@ -1,4 +1,4 @@
-package com.reports_microservice.reports.domain.UseCase;
+package com.reports_microservice.reports.domain.usecase;
 
 import com.reports_microservice.reports.domain.api.ISaleReportModelServicePort;
 import com.reports_microservice.reports.domain.model.SaleReportModel;

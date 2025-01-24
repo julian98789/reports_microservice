@@ -1,6 +1,6 @@
 package com.reports_microservice.reports.infrastructure.configuration.security;
 
-import com.reports_microservice.reports.domain.Util.Util;
+import com.reports_microservice.reports.domain.util.Util;
 import com.reports_microservice.reports.infrastructure.security.service.JwtDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

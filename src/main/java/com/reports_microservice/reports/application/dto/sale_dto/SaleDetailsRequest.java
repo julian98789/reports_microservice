@@ -1,6 +1,6 @@
 package com.reports_microservice.reports.application.dto.sale_dto;
 
-import com.reports_microservice.reports.domain.Util.Util;
+import com.reports_microservice.reports.domain.util.Util;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
