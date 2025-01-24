@@ -14,10 +14,12 @@ public class SaleReportAdapter implements ISaleReportModelPersistencePort {
     private final ISaleReportEntityMapper saleReportEntityMapper;
 
     @Override
-    public void generateReport(SaleReportModel saleReport) {
+    public SaleReportModel generateReport(SaleReportModel saleReport) {
 
         SaleReportEntity saleReportEntity = saleReportEntityMapper.saleResportModelToSaleReportEntity(saleReport);
 
         saleReportRepository.save(saleReportEntity);
+
+        return saleReportEntityMapper.saleReportEntityToSaleReportModel(saleReportEntity);
     }
 }

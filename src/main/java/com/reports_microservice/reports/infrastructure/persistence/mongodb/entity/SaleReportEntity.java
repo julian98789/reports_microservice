@@ -28,7 +28,7 @@ public class SaleReportEntity {
     private String userEmail;
 
     @Indexed
-    private String creationDate;
+    private LocalDate creationDate;
 
     @Indexed
     private Double total;

@@ -8,4 +8,6 @@ import org.mapstruct.Mapper;
 public interface ISaleReportEntityMapper {
 
     SaleReportEntity saleResportModelToSaleReportEntity (SaleReportModel saleReport);
+
+    SaleReportModel saleReportEntityToSaleReportModel (SaleReportEntity saleReportEntity);
 }

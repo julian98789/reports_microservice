@@ -4,7 +4,6 @@ public class SaleDetailsModel {
 
     private Long id;
 
-    private SaleModel sale;
 
     private Long articleId;
 
@@ -14,9 +13,8 @@ public class SaleDetailsModel {
 
     private Double subtotal;
 
-    public SaleDetailsModel(Long id, SaleModel sale, Long articleId, Double price, Integer quantity, Double subtotal) {
+    public SaleDetailsModel(Long id, Long articleId, Double price, Integer quantity, Double subtotal) {
         this.id = id;
-        this.sale = sale;
         this.articleId = articleId;
         this.price = price;
         this.quantity = quantity;
@@ -31,13 +29,6 @@ public class SaleDetailsModel {
         this.id = id;
     }
 
-    public SaleModel getSale() {
-        return sale;
-    }
-
-    public void setSale(SaleModel sale) {
-        this.sale = sale;
-    }
 
     public Long getArticleId() {
         return articleId;
