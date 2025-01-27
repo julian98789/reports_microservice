@@ -1,6 +1,5 @@
 package com.reports_microservice.reports.domain.usecase;
 
-
 import com.reports_microservice.reports.domain.model.SaleReportModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,10 +7,10 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Collections;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-class SaleReportModelTest {
-
+class SaleReportModelUseCaseTest {
+    
     @Test
     @DisplayName("Debe crear correctamente un modelo de reporte de venta con los valores proporcionados")
     void testSaleReportModel() {
@@ -30,4 +29,5 @@ class SaleReportModelTest {
         assertEquals(userEmail, saleReportModel.getUserEmail());
         assertEquals(Collections.emptyList(), saleReportModel.getSaleDetails());
     }
+
 }
