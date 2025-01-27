@@ -1,7 +1,6 @@
 package com.reports_microservice.reports.domain.util;
 
 public class Util {
-
     public static final String CLAIM_AUTHORITIES = "authorities";
     public static final String EMAIL = "email";
     public static final String AUTH_HEADER = "Authorization";

@@ -1,5 +1,6 @@
 package com.reports_microservice.reports.application.dto.sale_dto;
 
+
 import com.reports_microservice.reports.domain.util.Util;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
@@ -26,7 +27,5 @@ public class SaleRequest {
     @NotNull(message = Util.CREATION_DATE_NOT_NULL)
     private LocalDate creationDate;
 
-    @NotEmpty(message = Util.SALE_DETAILS_NOT_NULL)
-    @Valid
     private List<SaleDetailsRequest> saleDetails;
 }
