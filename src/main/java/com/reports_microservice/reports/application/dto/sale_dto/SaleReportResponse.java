@@ -15,5 +15,5 @@ public class SaleReportResponse {
     private String userEmail;
     private LocalDate creationDate;
     private Double total;
-    private List<SaleDetailsModel> saleDetails;
+    private List<SaleDetailsResponse> saleDetails;
 }
