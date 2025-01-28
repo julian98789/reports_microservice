@@ -16,7 +16,7 @@ services:
     networks:
       - backend
 
-  java-app:
+  report-app:
     build:
       context: .
       dockerfile: Dockerfile
