@@ -13,6 +13,7 @@ import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 class SaleReportAdapterTest {
@@ -32,8 +33,9 @@ class SaleReportAdapterTest {
     }
 
     @Test
-    @DisplayName("Debe retornar SaleReportModel cuando se llama a generateReport")
-    void generateReport_ShouldReturnSaleReportModel() {
+    @DisplayName("Should return SaleReportModel when generateReport is called")
+    void shouldReturnSaleReportModelWhenGenerateReportIsCalled() {
+
         SaleReportModel saleReportModel = new SaleReportModel();
         SaleReportEntity saleReportEntity = new SaleReportEntity();
 
@@ -44,5 +46,9 @@ class SaleReportAdapterTest {
         SaleReportModel result = saleReportAdapter.generateReport(saleReportModel);
 
         assertEquals(saleReportModel, result);
+
+        verify(saleReportEntityMapper).saleResportModelToSaleReportEntity(saleReportModel);
+        verify(saleReportRepository).save(saleReportEntity);
+        verify(saleReportEntityMapper).saleReportEntityToSaleReportModel(saleReportEntity);
     }
 }

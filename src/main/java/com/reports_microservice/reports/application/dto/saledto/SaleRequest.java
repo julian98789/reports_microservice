@@ -1,9 +1,7 @@
-package com.reports_microservice.reports.application.dto.sale_dto;
+package com.reports_microservice.reports.application.dto.saledto;
 
 
 import com.reports_microservice.reports.domain.util.Util;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
