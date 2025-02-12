@@ -1,7 +1,7 @@
 package com.reports_microservice.reports.infrastructure.http.controller;
 
-import com.reports_microservice.reports.application.dto.sale_dto.SaleReportResponse;
-import com.reports_microservice.reports.application.dto.sale_dto.SaleRequest;
+import com.reports_microservice.reports.application.dto.saledto.SaleReportResponse;
+import com.reports_microservice.reports.application.dto.saledto.SaleRequest;
 import com.reports_microservice.reports.application.handler.IsaleHandler;
 import com.reports_microservice.reports.domain.util.Util;
 import io.swagger.v3.oas.annotations.Operation;
